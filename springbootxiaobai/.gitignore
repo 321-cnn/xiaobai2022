@@ -1,0 +1,18 @@
+HELP.md
+
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+*.xml
+/.idea/
+/out/
+/target/
+
+# Eclipse
+/.settings/
+/build/
+.classpath
+.project
+
