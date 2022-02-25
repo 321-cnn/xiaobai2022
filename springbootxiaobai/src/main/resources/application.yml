@@ -1,0 +1,30 @@
+#端口
+server:
+  port: 9090
+
+spring:
+
+  devtools:
+    restart:
+      exclude: static/**,public/**
+      enabled: true
+
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/cnn?serverTimezone=Asia/Shanghai&useUnicode=true&zeroDateTimeBehavior=convertToNull&autoReconnect=true&characterEncoding=utf-8
+    username: root
+    password:
+
+  freemarker:
+    suffix: ftl
+
+
+mybatis:
+  #config-location: classpath:mybatis-config.xml # 配置 MyBatis 配置文件路径
+  mapper-locations: classpath:mapper/*Mapper.xml # 配置 Mapper XML 地址
+  #configuration:
+  # log-impl: org.apache.ibatis.logging.stdout.StdOutImpl  #日志打印
+
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
