@@ -63,9 +63,9 @@
           <div style="flex: 1; font-size: 22px">
             <span :class="collapseBtnClass" style="cursor: pointer" @click="collapse"></span>
           </div>
-          <div class="block" width="42px" height="42px" style="border: 1px darkslategrey solid;">
+          <div class="block" width="43px" style="border: 1px #78a6ea solid;max-height: 43px; margin-top: 10px; box-shadow: 1px 1px 5px #409EFF inset">
             <el-image
-                style="width: 40px; height: 40px; position: center"
+                style="width: 40px; height: 40px; "
                 :src="url"
             >
             </el-image>
