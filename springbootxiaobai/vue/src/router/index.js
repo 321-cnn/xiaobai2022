@@ -30,4 +30,11 @@ const router = new VueRouter({
   routes
 })
 
+//路由守卫
+router.beforeEach((to, from, next) => {
+  localStorage.setItem("currentPathName" , to.name);  //设置的当前路由名称 ，为了在 Header 中使用
+  store.commit("setPath");  // 触发 store 的数据更新
+  next(); //放行路由
+})
+
 export default router

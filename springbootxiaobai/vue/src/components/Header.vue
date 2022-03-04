@@ -5,14 +5,14 @@
 
       <el-breadcrumb separator="/" style="display: inline-block">
         <el-breadcrumb-item :to="{ path: '/' }">首页</el-breadcrumb-item>
-        <el-breadcrumb-item>用户管理</el-breadcrumb-item>
+        <el-breadcrumb-item>{{ currentPathName }}</el-breadcrumb-item>
         <el-breadcrumb-item>用户列表</el-breadcrumb-item>
       </el-breadcrumb>
     </div>
 
     <div class="block">
       <el-image
-          style="width: 40px; height: 40px; "
+          style="width: 40px; height: 40px;"
           :src="url"
       >
       </el-image>
@@ -36,6 +36,16 @@ export default {
     collapseBtnClass: String,
     collapse: Boolean,
     url: String,
+  },
+  computed: {
+    currentPathName(){
+      return this.$store.state.currentPathName; //需要监听的数据
+    }
+  },
+  watch: {  //监听路由变化
+    currentPathName(newVal , oldVal){
+      console.log(newVal)
+    }
   }
 }
 </script>
